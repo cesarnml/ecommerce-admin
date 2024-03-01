@@ -3,7 +3,7 @@
 ## Sections
 
 - [x] ~~_Intro_~~ [2024-03-01]
-- [ ] Environment setup (Admin)
+- [x] ~~_Environment setup (Admin)_~~ [2024-03-01]
 - [ ] Clerk Authentication (Admin)
 - [ ] Modal components (Admin)
 - [ ] Form components (Admin)
