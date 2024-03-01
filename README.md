@@ -4,8 +4,8 @@
 
 - [x] ~~_Intro_~~ [2024-03-01]
 - [x] ~~_Environment setup (Admin)_~~ [2024-03-01]
-- [ ] Clerk Authentication (Admin)
-- [ ] Modal components (Admin)
+- [x] ~~_Clerk Authentication (Admin)_~~ [2024-03-01]
+- [x] ~~_Modal components (Admin)_~~ [2024-03-01]
 - [ ] Form components (Admin)
 - [ ] Prisma, PlanetScale, MySQL setup (Admin)
 - [ ] Dashboard setup (Admin)
