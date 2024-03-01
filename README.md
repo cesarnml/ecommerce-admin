@@ -6,7 +6,7 @@
 - [x] ~~_Environment setup (Admin)_~~ [2024-03-01]
 - [x] ~~_Clerk Authentication (Admin)_~~ [2024-03-01]
 - [x] ~~_Modal components (Admin)_~~ [2024-03-01]
-- [ ] Form components (Admin)
+- [x] ~~_Form components (Admin)_~~ [2024-03-01]
 - [ ] Prisma, PlanetScale, MySQL setup (Admin)
 - [ ] Dashboard setup (Admin)
 - [ ] Navigation bar (Admin)

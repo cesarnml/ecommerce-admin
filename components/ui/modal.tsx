@@ -1,8 +1,8 @@
 "use client";
 
-import { DialogTitle } from "@radix-ui/react-dialog";
 import {
   Dialog,
+  DialogTitle,
   DialogContent,
   DialogDescription,
   DialogHeader,
