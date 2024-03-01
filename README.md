@@ -7,8 +7,8 @@
 - [x] ~~_Clerk Authentication (Admin)_~~ [2024-03-01]
 - [x] ~~_Modal components (Admin)_~~ [2024-03-01]
 - [x] ~~_Form components (Admin)_~~ [2024-03-01]
-- [ ] Prisma, PlanetScale, MySQL setup (Admin)
-- [ ] Dashboard setup (Admin)
+- [x] ~~_Prisma, PlanetScale, MySQL setup (Admin)_~~ [2024-03-01]
+- [x] ~~_Dashboard setup (Admin)_~~ [2024-03-01]
 - [ ] Navigation bar (Admin)
 - [ ] Settings page (Admin)
 - [ ] Billboards Entity (Admin)
