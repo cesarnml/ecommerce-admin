@@ -9,7 +9,7 @@
 - [x] ~~_Form components (Admin)_~~ [2024-03-01]
 - [x] ~~_Prisma, PlanetScale, MySQL setup (Admin)_~~ [2024-03-01]
 - [x] ~~_Dashboard setup (Admin)_~~ [2024-03-01]
-- [ ] Navigation bar (Admin)
+- [x] ~~_Navigation bar (Admin)_~~ [2024-03-02]
 - [ ] Settings page (Admin)
 - [ ] Billboards Entity (Admin)
 - [ ] Data Table (Admin)
