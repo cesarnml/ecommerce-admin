@@ -6,7 +6,7 @@ type Props = {
 export const Heading = ({ title, description }: Props) => {
   return (
     <div>
-      <h2>{title}d</h2>
+      <h2>{title}</h2>
       <p>{description}</p>
     </div>
   );
