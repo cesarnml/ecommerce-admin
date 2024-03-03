@@ -1,19 +1,19 @@
-import { SettingsForm } from "@/app/(dashboard)/[storeId]/(routes)/settings/components/settings-form";
-import prismadb from "@/lib/prismadb";
-import { auth } from "@clerk/nextjs";
-import { redirect } from "next/navigation";
+import { SettingsForm } from '@/app/(dashboard)/[storeId]/(routes)/settings/components/settings-form'
+import prismadb from '@/lib/prismadb'
+import { auth } from '@clerk/nextjs'
+import { redirect } from 'next/navigation'
 
 type Props = {
   params: {
-    storeId: string;
-  };
-};
+    storeId: string
+  }
+}
 
 export default async function SettingsPage({ params }: Props) {
-  const { userId } = auth();
+  const { userId } = auth()
 
   if (!userId) {
-    redirect("/sign-in");
+    redirect('/sign-in')
   }
 
   const store = await prismadb.store.findFirst({
@@ -21,10 +21,10 @@ export default async function SettingsPage({ params }: Props) {
       id: params.storeId,
       userId,
     },
-  });
+  })
 
   if (!store) {
-    redirect("/");
+    redirect('/')
   }
 
   return (
@@ -33,5 +33,5 @@ export default async function SettingsPage({ params }: Props) {
         <SettingsForm initialData={store} />
       </div>
     </div>
-  );
+  )
 }

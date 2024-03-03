@@ -1,21 +1,21 @@
-import { MainNav } from "@/components/main-nav";
-import prismadb from "@/lib/prismadb";
-import { UserButton, auth } from "@clerk/nextjs";
-import { redirect } from "next/navigation";
-import { StoreSwitcher } from "./store-switcher";
+import { MainNav } from '@/components/main-nav'
+import prismadb from '@/lib/prismadb'
+import { UserButton, auth } from '@clerk/nextjs'
+import { redirect } from 'next/navigation'
+import { StoreSwitcher } from './store-switcher'
 
 export const Navbar = async () => {
-  const { userId } = auth();
+  const { userId } = auth()
 
   if (!userId) {
-    redirect("/sign-in");
+    redirect('/sign-in')
   }
 
   const stores = await prismadb.store.findMany({
     where: {
       userId,
     },
-  });
+  })
   return (
     <div className="border-b">
       <div className="flex h-16 items-center px-4">
@@ -26,5 +26,5 @@ export const Navbar = async () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

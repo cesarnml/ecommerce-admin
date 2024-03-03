@@ -1,11 +1,11 @@
-"use client";
+'use client'
 
-import * as z from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import * as z from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm } from 'react-hook-form'
 
-import { Modal } from "@/components/ui/modal";
-import { useStoreModal } from "@/hooks/use-store-modal";
+import { Modal } from '@/components/ui/modal'
+import { useStoreModal } from '@/hooks/use-store-modal'
 import {
   Form,
   FormControl,
@@ -13,46 +13,46 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "../ui/button";
-import { useState } from "react";
-import toast from "react-hot-toast";
-import { useRouter } from "next/navigation";
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Button } from '../ui/button'
+import { useState } from 'react'
+import toast from 'react-hot-toast'
+import { useRouter } from 'next/navigation'
 
 const formSchema = z.object({
   name: z.string().min(1),
-});
+})
 export const StoreModal = () => {
-  const storeModal = useStoreModal();
-  const router = useRouter();
+  const storeModal = useStoreModal()
+  const router = useRouter()
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false)
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
+      name: '',
     },
-  });
+  })
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      setLoading(true);
-      const response = await fetch("/api/stores", {
-        method: "POST",
+      setLoading(true)
+      const response = await fetch('/api/stores', {
+        method: 'POST',
         body: JSON.stringify(values),
-      });
-      const store = await response.json();
-      console.log("store:", store);
-      window.location.assign(`/${store.id}`);
+      })
+      const store = await response.json()
+      console.log('store:', store)
+      window.location.assign(`/${store.id}`)
     } catch (error) {
-      toast.error("Something went wrong.");
-      console.log("error:", error);
+      toast.error('Something went wrong.')
+      console.log('error:', error)
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-    console.log(values);
-  };
+    console.log(values)
+  }
 
   return (
     <Modal
@@ -72,22 +72,14 @@ export const StoreModal = () => {
                   <FormItem>
                     <FormLabel>Name</FormLabel>
                     <FormControl>
-                      <Input
-                        disabled={loading}
-                        placeholder="E-Commerce"
-                        {...field}
-                      />
+                      <Input disabled={loading} placeholder="E-Commerce" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
               <div className="pt-6 space-x-2 flex items-center justify-end">
-                <Button
-                  disabled={loading}
-                  variant="outline"
-                  onClick={storeModal.onClose}
-                >
+                <Button disabled={loading} variant="outline" onClick={storeModal.onClose}>
                   Cancel
                 </Button>
                 <Button disabled={loading} type="submit">
@@ -99,5 +91,5 @@ export const StoreModal = () => {
         </div>
       </div>
     </Modal>
-  );
-};
+  )
+}
