@@ -39,7 +39,7 @@ export const StoreSwitcher = ({ className, items = [] }: Props) => {
 
   const onStoreSelect = (store: { value: string; label: string }) => {
     setOpen(false)
-    router.push(`${store.value}`)
+    router.push(`/${store.value}`)
   }
 
   return (

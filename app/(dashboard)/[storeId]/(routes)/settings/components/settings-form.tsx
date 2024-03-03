@@ -37,7 +37,7 @@ export const SettingsForm = ({ initialData }: Props) => {
     <>
       <div className="flex items-center justify-between">
         <Heading title="Settings" description="Manage store preferences" />
-        <Button variant="destructive" size="icon" onClick={() => {}}>
+        <Button disabled={loading} variant="destructive" size="icon" onClick={() => setOpen(true)}>
           <Trash className="w-4 h-4" />
         </Button>
       </div>
@@ -58,6 +58,9 @@ export const SettingsForm = ({ initialData }: Props) => {
               )}
             />
           </div>
+          <Button disabled={loading} className="ml-auto" type="submit">
+            Save changes
+          </Button>
         </form>
       </Form>
     </>
