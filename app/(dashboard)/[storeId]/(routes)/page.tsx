@@ -1,11 +1,11 @@
-import prismadb from '@/lib/prismadb'
+import { prisma } from '@/lib/prisma'
 
 type Props = {
   params: { storeId: string }
 }
 
 export default async function DashboardPage({ params }: Props) {
-  const store = await prismadb.store.findFirst({
+  const store = await prisma.store.findFirst({
     where: {
       id: params.storeId,
     },

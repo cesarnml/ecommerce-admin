@@ -10,11 +10,11 @@
 - [x] ~~_Prisma, PlanetScale, MySQL setup (Admin)_~~ [2024-03-01]
 - [x] ~~_Dashboard setup (Admin)_~~ [2024-03-01]
 - [x] ~~_Navigation bar (Admin)_~~ [2024-03-02]
-- [ ] Settings page (Admin)
-- [ ] Billboards Entity (Admin)
-- [ ] Data Table (Admin)
-- [ ] Categories Entity (Admin)
-- [ ] Sizes Entity (Admin)
+- [x] ~~_Settings page (Admin)_~~ [2024-03-04]
+- [x] ~~_Billboards Entity (Admin)_~~ [2024-03-04]
+- [x] ~~_Data Table (Admin)_~~ [2024-03-04]
+- [x] ~~_Categories Entity (Admin)_~~ [2024-03-04]
+- [x] ~~_Sizes Entity (Admin)_~~ [2024-03-04]
 - [ ] Colors Entity (Admin)
 - [ ] Products Entity (Admin)
 - [ ] Orders Entity (Admin)

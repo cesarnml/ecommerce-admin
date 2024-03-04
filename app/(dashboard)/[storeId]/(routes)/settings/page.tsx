@@ -1,5 +1,5 @@
 import { SettingsForm } from '@/app/(dashboard)/[storeId]/(routes)/settings/components/settings-form'
-import prismadb from '@/lib/prismadb'
+import { prisma } from '@/lib/prisma'
 import { auth } from '@clerk/nextjs'
 import { redirect } from 'next/navigation'
 
@@ -16,7 +16,7 @@ export default async function SettingsPage({ params }: Props) {
     redirect('/sign-in')
   }
 
-  const store = await prismadb.store.findFirst({
+  const store = await prisma.store.findFirst({
     where: {
       id: params.storeId,
       userId,
