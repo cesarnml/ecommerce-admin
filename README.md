@@ -1,4 +1,4 @@
-# E-Commerce Store Tutorial by Antonio
+# E-Commerce Admin Tutorial by Antonio
 
 ## Sections
 
