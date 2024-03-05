@@ -60,7 +60,7 @@ export async function GET(req: Request, { params }: { params: Params }) {
       return new NextResponse('Store ID is required', { status: 400 })
     }
 
-    const categories = await prisma.billboard.findMany({
+    const categories = await prisma.category.findMany({
       where: {
         storeId: params.storeId,
       },
