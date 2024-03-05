@@ -22,7 +22,7 @@ export async function GET(req: Request, { params }: { params: Params }) {
 
     return NextResponse.json(color)
   } catch (error) {
-    console.log('[COLOR_DELETE]:', error)
+    console.log('[COLOR_GET]:', error)
     return new NextResponse('Internal error', { status: 500 })
   }
 }

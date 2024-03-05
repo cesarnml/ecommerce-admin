@@ -22,7 +22,7 @@ export async function GET(req: Request, { params }: { params: Params }) {
 
     return NextResponse.json(billboard)
   } catch (error) {
-    console.log('[BILLBOARD_DELETE]:', error)
+    console.log('[BILLBOARD_GET]:', error)
     return new NextResponse('Internal error', { status: 500 })
   }
 }

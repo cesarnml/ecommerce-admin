@@ -1,18 +1,20 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { ImagePlusIcon, Trash } from 'lucide-react'
-import Image from 'next/image'
 import { CldUploadWidget } from 'next-cloudinary'
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
+
 type Props = {
   disabled?: boolean
   onChange: (value: string) => void
   onRemove: (value: string) => void
   value: string[]
+  multiple?: boolean
 }
 
-export const ImageUpload = ({ disabled, onChange, onRemove, value }: Props) => {
+export const ImageUpload = ({ disabled, onChange, onRemove, value, multiple = false }: Props) => {
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
@@ -39,11 +41,15 @@ export const ImageUpload = ({ disabled, onChange, onRemove, value }: Props) => {
           </div>
         ))}
       </div>
-      <CldUploadWidget onSuccess={onUpload} uploadPreset="ecommerce">
+      <CldUploadWidget
+        // FIXME: This is a temporary solution to avoid the error
+        onUpload={onUpload}
+        uploadPreset="ecommerce"
+        options={{ sources: ['local'], maxFiles: multiple ? 10 : 1 }}
+      >
         {({ open }) => {
-          const onClick = () => {
-            open()
-          }
+          const onClick = () => open()
+
           return (
             <Button type="button" disabled={disabled} variant="secondary" onClick={onClick}>
               <ImagePlusIcon className="size-4 mr-2" />

@@ -16,7 +16,7 @@
 - [x] ~~_Categories Entity (Admin)_~~ [2024-03-04]
 - [x] ~~_Sizes Entity (Admin)_~~ [2024-03-04]
 - [x] ~~_Colors Entity (Admin)_~~ [2024-03-05]
-- [ ] Products Entity (Admin)
+- [x] ~~_Products Entity (Admin)_~~ [2024-03-05]
 - [ ] Orders Entity (Admin)
 - [ ] Environment setup & featured products (Store)
 - [ ] Individual product screen (Store)

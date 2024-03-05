@@ -22,7 +22,7 @@ export async function GET(req: Request, { params }: { params: Params }) {
 
     return NextResponse.json(category)
   } catch (error) {
-    console.log('[CATEGORY_DELETE]:', error)
+    console.log('[CATEGORY_GET]:', error)
     return new NextResponse('Internal error', { status: 500 })
   }
 }
