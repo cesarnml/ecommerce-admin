@@ -26,6 +26,6 @@
 - [x] ~~_Stripe Setup & Checkout finalization (Admin, Store)_~~ [2024-03-06]
 - [x] ~~_Dashboard page (Admin)_~~ [2024-03-06]
 - [x] ~~_Dark Mode (Admin)_~~ [2024-03-06]
-- [ ] Deployment to Vercel (Admin, Store)
+- [x] ~~_Deployment to Vercel (Admin, Store)_~~ [2024-03-06]
 
 ## Notes
